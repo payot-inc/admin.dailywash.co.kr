@@ -217,7 +217,7 @@ export default {
     text-align: center;
     .v-btn{
       width:150px;
-      background: #494949;
+      background: #292929;
       color:#fff;
     }
   }

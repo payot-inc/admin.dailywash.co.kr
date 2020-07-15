@@ -136,16 +136,30 @@
         <v-btn
           outlined
           class="lastBtn"
+          @click="$refs.reConfirm.open(true)"
         >
           등록완료
         </v-btn>
       </div>
     </div>
-  </div>
+
+    <Message ref="reConfirm">
+      <template slot="text">
+        등록을 완료할까요?
+      </template>
+    </Message>
+
+  </div> 
 </template>
 
 <script>
+
+import Message from '../components/message'
+
 export default {
+  components:{
+    Message
+  },
   data: () => ({
     items:[
       {
@@ -205,7 +219,7 @@ export default {
     td{
       border-bottom:1px solid #e2e2e2;
       padding:10px;
-      input{border:1px solid #aaa;height:30px;border-radius:4px;padding:0 10px;font-size:14px;}
+      input{border:1px solid #aaa;height:30px;border-radius:4px;padding:0 5px;font-size:14px;}
       input.error-box{
         border:1px solid #d22828;
       }
@@ -219,6 +233,7 @@ export default {
         border-radius:4px;
         min-height:100px;
         max-height:200px;
+        padding:5px;
       }
       
     }
@@ -238,6 +253,9 @@ export default {
         font-size:14px;
         letter-spacing: -0.4px;
         font-weight:normal;
+        background: #292929;
+        border:0px;
+        color:#fff;
       }
     }
 
@@ -246,7 +264,7 @@ export default {
         margin-left:10px;
         width:100px;
         font-size:14px;
-        background: #494949;
+        background: #292929;
         color:#fff;
         border:0px;
         font-weight:normal;
@@ -274,6 +292,5 @@ export default {
     text-align: center;
     .lastBtn{width:200px;height:45px;background: #2816A7;color:#fff;}
   }
-
 }
 </style>

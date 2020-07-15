@@ -9,7 +9,7 @@
       <v-data-table :headers="headers" :items="desserts" :items-per-page="5">
         <template v-slot:item.button="{  }">
           <div class="calcButton">
-            <v-btn small @click="$refs.calcModal.open(true)" elevation="0" outlined>수정하기</v-btn>
+            <v-btn small @click="$refs.partnerDetail.open(true)" elevation="0" outlined>상세보기</v-btn>
           </div>
         </template>
 
@@ -37,17 +37,17 @@
       </v-data-table>
     </div>
 
-    <CalcModal ref="calcModal" />
+    <PartnerDetail ref="partnerDetail" />
   </div>
 </template>
 
 <script>
-import CalcModal from '@/components/calcModal.vue';
+import PartnerDetail from '@/components/partnerDetail.vue';
 
 export default {
 
   components:{
-    CalcModal,
+    PartnerDetail,
   },
   
   data: () => ({
@@ -58,7 +58,7 @@ export default {
       { text: '연락처', value: 'phone'},
       { text: '계약일',  value:'contractDate'},
       { text: '은행정보', value:'bank'},
-      { text: '상세내용수정', value: 'button'},
+      { text: '상세', value: 'button'},
     ],
     desserts: [
       {
