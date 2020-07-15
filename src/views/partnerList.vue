@@ -5,6 +5,7 @@
     </div>
 
     <div class="contentsBody">
+
       <v-data-table :headers="headers" :items="desserts" :items-per-page="5">
         <template v-slot:item.button="{  }">
           <div class="calcButton">
@@ -53,7 +54,6 @@ export default {
     headers: [
       { text: '매장명', value:'shopName'},
       { text: '가입자', value:'userName'},
-      { text: '사업형태', value:'business'},
       { text: '사업자주소', value: 'address'},
       { text: '연락처', value: 'phone'},
       { text: '계약일',  value:'contractDate'},
@@ -64,7 +64,6 @@ export default {
       {
         shopName:'페이오티 금정점',
         userName:'박수민',
-        business:'배달원',
         address:'부산시 북구 구남언덕로 15',
         phone:'010-8525-4561',
         contractDate:'2019년 3월 4일',

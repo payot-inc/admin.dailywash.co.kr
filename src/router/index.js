@@ -9,7 +9,9 @@ import ShopCalcList from "../views/shopCalcList.vue";
 import DeliverCalc from "../views/deliverCalc.vue";
 import DeliverCalcList from "../views/deliverCalcList.vue";
 import PartnerList from "../views/partnerList.vue";
+import PartnerAdd from "../views/partnerAdd.vue";
 import OrderTotalList from "../views/orderTotalList.vue";
+
 
 Vue.use(VueRouter);
 
@@ -33,6 +35,11 @@ const routes = [
     path: "/partnerList",
     name: "PartnerList",
     component: PartnerList,
+  },
+  { 
+    path: "/partnerAdd",
+    name: "PartnerAdd",
+    component: PartnerAdd,
   },
   {
     path: "/machineCalc",

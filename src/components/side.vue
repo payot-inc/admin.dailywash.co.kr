@@ -26,16 +26,16 @@ export default {
   data(){
     return {
       items:[
-        {
-          title:'매출관리',
-          icon:'mdi-equalizer',
-          items:[
-            {
-              title:'월별매출',
-              link:'/'
-            }
-          ],
-        },
+        // {
+        //   title:'매출관리',
+        //   icon:'mdi-equalizer',
+        //   items:[
+        //     {
+        //       title:'월별매출',
+        //       link:'/'
+        //     }
+        //   ],
+        // },
         {
           title:'주문관리',
           icon:'mdi-store',
@@ -51,37 +51,37 @@ export default {
           ],
         },
         
-        {
-          title:'정산관리',
-          icon:'mdi-calculator',
-          items:[
-            {
-              title:'세탁장비 정산',
-              link:'/machineCalc',
-            },
-            {
-              title:'세탁장비 정산내역',
-              link:'/machineCalcList'
-            },
-            {
-              title:'세탁소 정산',
-              link:'/shopCalc'
-            },
-            {
-              title:'세탁소 정산내역',
-              link:'/shopCalcList'
-            },
-            {
-              title:'배달원 정산',
-              link:'/deliverCalc'
-            },
-            {
-              title:'배달월 정산내역',
-              link:'/deliverCalcList',
-            }
+        // {
+        //   title:'정산관리',
+        //   icon:'mdi-calculator',
+        //   items:[
+        //     {
+        //       title:'세탁장비 정산',
+        //       link:'/machineCalc',
+        //     },
+        //     {
+        //       title:'세탁장비 정산내역',
+        //       link:'/machineCalcList'
+        //     },
+        //     {
+        //       title:'세탁소 정산',
+        //       link:'/shopCalc'
+        //     },
+        //     {
+        //       title:'세탁소 정산내역',
+        //       link:'/shopCalcList'
+        //     },
+        //     {
+        //       title:'배달원 정산',
+        //       link:'/deliverCalc'
+        //     },
+        //     {
+        //       title:'배달월 정산내역',
+        //       link:'/deliverCalcList',
+        //     }
             
-          ],
-        },
+        //   ],
+        // },
         {
           title:'파트너관리',
           icon:'mdi-account-box',
@@ -91,22 +91,23 @@ export default {
               link:'partnerList'
             },
             {
-              title:'파트너등록'
+              title:'파트너등록',
+              link:'partnerAdd'
             }
           ],
         },
-        {
-          title:'장비관리',
-          icon:'mdi-washing-machine',
-          items:[
-            {
-              title:'장비목록',
-            },
-            {
-              title:'장비등록',
-            },
-          ]
-        }
+        // {
+        //   title:'장비관리',
+        //   icon:'mdi-washing-machine',
+        //   items:[
+        //     {
+        //       title:'장비목록',
+        //     },
+        //     {
+        //       title:'장비등록',
+        //     },
+        //   ]
+        // }
       ]
     }
   },
