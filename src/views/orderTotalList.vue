@@ -3,6 +3,7 @@
     <div class="contentsHead">
       <h3>전체주문내역</h3>
     </div>
+    
 
     <div class="contentsBody">
 
@@ -87,6 +88,7 @@
                 <select>
                   <option>주문자명</option>
                   <option>파트너명</option>
+                  <option>주문번호</option>
                 </select>
                 <input type="text">
               </td>
@@ -94,12 +96,24 @@
           </table>
         </dd>
         <dd class="filter-bottom">
-          <v-btn outlined>검색하기</v-btn>
+          <v-btn 
+            outlined
+            @click="$refs.progressModal.open(true)"
+          >
+            검색하기
+          </v-btn>
         </dd>
       </dl>
 
       <div class="dataTable">
 
+        <v-progress-linear
+          color="#2816A7"
+          height="2px"
+          indeterminate
+          reverse
+        ></v-progress-linear>
+            
         <v-data-table :headers="headers" :items="desserts" :items-per-page="5">
           <template v-slot:item.button="{  }">
             <div class="calcButton">
@@ -134,16 +148,19 @@
     </div>
 
     <OrderDetail ref="orderDetail" />
+    <ProgressModal ref="progressModal"/>
   </div>
 </template>
 
 <script>
 import OrderDetail from '@/components/orderDetail.vue';
+import ProgressModal from '@/components/progressModal.vue';
 
 export default {
 
   components:{
     OrderDetail,
+    ProgressModal,
   },
   
   data: () => ({
@@ -159,6 +176,26 @@ export default {
     ],
     orderState:['주문요청','주문확인','수거완료','세탁물확인','결제요청','결제대기','작업완료','배송완료'],
     desserts: [
+      {
+        orderState:'세탁입고',
+        orderDate:'2020-03-12',
+        userName:'박수민',
+        userPhone:'010-8525-4561',
+        userAddress:'부산시 북구 구남언덕로 15',
+        orderPrice:20000,
+        goodsList:'상품목록',
+
+      },
+      {
+        orderState:'세탁입고',
+        orderDate:'2020-03-12',
+        userName:'박수민',
+        userPhone:'010-8525-4561',
+        userAddress:'부산시 북구 구남언덕로 15',
+        orderPrice:20000,
+        goodsList:'상품목록',
+
+      },
       {
         orderState:'세탁입고',
         orderDate:'2020-03-12',
